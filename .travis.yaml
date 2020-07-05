@@ -1,0 +1,14 @@
+#Specify language and versions
+language: python
+python:
+    - "3.5"
+    - "3.7"
+
+# install dependencies (in this case i have given 1 though not needed)
+install:
+    - pip install -r requirements.txt
+
+# run tests
+script:
+    - export PYTHONPATH=$PYTHONPATH:$(pwd)
+    - python UnitTests.py
