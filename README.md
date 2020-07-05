@@ -1,2 +1,2 @@
 # trvavis
-CI pipeline example
+A basic CI pipeline
