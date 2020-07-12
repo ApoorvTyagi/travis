@@ -1,8 +1,9 @@
 #Specify language and versions
 language: python
 python:
-    - "3.5"
     - "3.7"
+
+cache: pip
 
 # install dependencies (in this case i have given 1 though not needed)
 install:
@@ -12,3 +13,4 @@ install:
 script:
     - export PYTHONPATH=$PYTHONPATH:$(pwd)
     - python UnitTests.py
+    - py.test --cov-report term-missing --cov app -v
