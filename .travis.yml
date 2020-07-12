@@ -13,4 +13,7 @@ install:
 script:
     - export PYTHONPATH=$PYTHONPATH:$(pwd)
     - python UnitTests.py
-    - python UnitTests.py
+    - coverage run UnitTests.py
+
+after_success:
+    - codecov
